@@ -28,10 +28,10 @@ stages:
         tags: |
           $(tag)
 
-- task: AzureCLI@2
-  inputs:
-    azureSubscription: 'cnenv(83332cf7-d44a-4182-bd49-75f261a7b730)'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: 'az account show'
+    - task: AzureCLI@2
+      inputs:
+        azureSubscription: 'cnenv(83332cf7-d44a-4182-bd49-75f261a7b730)'
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: 'az account show'
 
